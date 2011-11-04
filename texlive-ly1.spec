@@ -1,3 +1,9 @@
+# revision 21086
+# category Package
+# catalog-ctan /fonts/psfonts/ly1
+# catalog-date 2010-06-15 10:37:47 +0200
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-ly1
 Version:	20100615
 Release:	1
@@ -110,6 +116,7 @@ fonts in LaTeX using LY1 encoding.
 %{_texmfdistdir}/tex/latex/ly1/texnansi.sty
 %{_texmfdistdir}/tex/plain/ly1/texnansi.tex
 %doc %{_texmfdistdir}/doc/fonts/ly1/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -120,3 +127,5 @@ fonts in LaTeX using LY1 encoding.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
