@@ -1,5 +1,5 @@
 Name:		texlive-ly1
-Version:	20170414
+Version:	20180527
 Release:	1
 Summary:	Support for LY1 LaTeX encoding
 Group:		Publishing
