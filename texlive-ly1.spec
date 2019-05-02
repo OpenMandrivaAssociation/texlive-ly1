@@ -1,6 +1,6 @@
 Name:		texlive-ly1
-Version:	20180527
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Support for LY1 LaTeX encoding
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/psfonts/ly1
