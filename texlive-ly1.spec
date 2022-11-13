@@ -1,12 +1,12 @@
 Name:		texlive-ly1
-Version:	20190228
+Version:	63565
 Release:	1
 Summary:	Support for LY1 LaTeX encoding
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/psfonts/ly1
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ly1.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ly1.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ly1.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ly1.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -21,12 +21,12 @@ the basic three (Times, Helvetica and Courier) Adobe Type 1
 fonts in LaTeX using LY1 encoding.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,11 +36,11 @@ fonts in LaTeX using LY1 encoding.
 %{_texmfdistdir}/fonts/vf/adobe/ly1
 %{_texmfdistdir}/tex/latex/ly1
 %{_texmfdistdir}/tex/plain/ly1
-%doc %{_texmfdistdir}/doc/fonts/ly1
+%doc %{_texmfdistdir}/doc/latex/ly1
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
